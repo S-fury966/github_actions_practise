@@ -2,6 +2,7 @@ name: Lint checker
 
 on:
   push:
+    paths: "*.py"
 
 jobs:
   code:
@@ -12,4 +13,4 @@ jobs:
       - name: install lint
         run: pip install ruff
       - name: run the linter
-        run: ruff check
+        run: ruff check .
